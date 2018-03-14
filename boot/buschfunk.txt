@@ -1,0 +1,20 @@
+# set your hostname
+hostname = piz-02
+
+# set your mesh ip
+mesh_ip = 172.16.33.21
+
+# set your mesh channel
+mesh_channel = 3
+
+# pi user password (is only set once, change via ssh)
+
+password = raspberry
+
+# fallback gps location (lat, lon)
+
+location = 66.5436144, 25.84719730000006
+
+# enable/disable serval-dna
+
+serval = 0
