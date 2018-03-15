@@ -18,3 +18,8 @@ location = 66.5436144, 25.84719730000006
 # enable/disable serval-dna
 
 serval = 0
+
+# enable/disable hdmi output
+
+hdmi = 0
+

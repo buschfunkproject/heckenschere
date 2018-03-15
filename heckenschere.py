@@ -145,7 +145,14 @@ if res.has_key('location'):
 with open("/tmp/location.latlon.txt", "w") as gps:
     gps.write(location + "\n")
 
-
+if res.has_key('hdmi'):
+    if res['hdmi'] == '0'
+        os.system("vcgencmd display_power 0")
+    else:
+        os.system("vcgencmd display_power 1")
+else:
+    os.system("vcgencmd display_power 0")
+    
 if reboot:
     print("Rebooting to apply new settings!")
     os.system("reboot")
