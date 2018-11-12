@@ -16,7 +16,7 @@ dns_file = "/etc/dnsmasq.d/ap_ns"
 hostname_file = "/etc/hostname"
 shadow_file = "/etc/shadow"
 
-dry_run = True
+dry_run = False
 
 def get_pid(name):
     try:
