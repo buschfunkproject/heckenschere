@@ -146,7 +146,7 @@ with open("/tmp/location.latlon.txt", "w") as gps:
     gps.write(location + "\n")
 
 if res.has_key('hdmi'):
-    if res['hdmi'] == '0'
+    if res['hdmi'] == '0':
         os.system("vcgencmd display_power 0")
     else:
         os.system("vcgencmd display_power 1")
