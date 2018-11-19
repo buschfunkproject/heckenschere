@@ -5,6 +5,7 @@ import os
 import re
 from subprocess import check_output
 
+DEFAULT_MESH_SSID="Buschfunk_Mesh"
 #config_file = "boot/buschfunk.txt"
 #if_mesh_file = "/tmp/etc/network/interfaces.d/mesh"
 #hostname_file = "/tmp/hostname"
@@ -32,9 +33,9 @@ address=/busch.funk/%s
     """ % (ip)
     return dns
 
-def get_mesh_config(ip, channel = "3", essid = "LOEWE_NICER_AdHoc"):
+def get_mesh_config(ip, channel = "3", essid = DEFAULT_MESH_SSID):
     mesh = """
-auto wlan0
+#auto wlan0
 iface wlan0 inet static
 address %s
 netmask 255.255.255.0
@@ -49,7 +50,7 @@ def write_config(config_file, cfg):
         with open(config_file, "w") as myfile:
             myfile.write(cfg)
 
-def is_current_mesh_config(ip, channel = "3", essid = "LOEWE_NICER_AdHoc"):
+def is_current_mesh_config(ip, channel = "3", essid = DEFAULT_MESH_SSID):
     with open(if_mesh_file) as myfile:
         all = myfile.read()
     return (ip in all and "channel " + channel in all and essid in all)        
